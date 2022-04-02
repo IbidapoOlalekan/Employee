@@ -37,6 +37,7 @@ public class EmployeeController {
         }
     }
 
+    // todo delete still having issues
     @DeleteMapping("/delete")
     public ResponseEntity<?> deleteEmployee(@RequestBody  CreateEmployeeRequest request){
         try {
@@ -47,7 +48,7 @@ public class EmployeeController {
             return new ResponseEntity<>(new ApiResponse(false,e.getMessage()), HttpStatus.BAD_REQUEST);
         }
     }
-
+    //todo findByName still not functional
     @GetMapping("{name}")
     public ResponseEntity<?> getEmployeesByName(@PathVariable String name){
         try {
