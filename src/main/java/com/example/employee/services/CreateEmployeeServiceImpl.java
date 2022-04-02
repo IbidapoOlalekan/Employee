@@ -10,6 +10,7 @@ import com.example.employee.utils.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -50,7 +51,7 @@ public class CreateEmployeeServiceImpl implements CreateEmployeeService{
     }
 
     @Override
-    public Employee updateEmployee(Employee employeeDetails, String name) {
+    public Employee updateEmployee(String name,Employee employeeDetails) {
         Employee updateEmployee = employeeRepository.findEmployeeByFirstName(name);
         if (updateEmployee == null) throw new ResourceNotFoundException("Employee not exists with name: " + name);
 

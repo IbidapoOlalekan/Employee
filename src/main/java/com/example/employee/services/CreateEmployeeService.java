@@ -11,7 +11,7 @@ public interface CreateEmployeeService {
     CreateEmployeeResponse create(CreateEmployeeRequest requests);
     List<FindEmployeeResponse> findEmployeeByName(String name);
     FindEmployeeResponse findEmployeeByFirstName(String firstName);
-    Employee updateEmployee(Employee employeeDetails, String name);
+    Employee updateEmployee( String name,Employee employeeDetails);
     void deleteEmployee(CreateEmployeeRequest employee);
     List<Employee> findAllEmployees();
 }
